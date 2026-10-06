@@ -1,0 +1,3425 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>مطعم نكهة اسطنبول</title>
+
+  <<style>
+
+  /* =========================
+     SHAMI THEME
+  ========================= */
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --burgundy: #721c24;
+    --burgundy-dark: #4d1118;
+    --burgundy-light: #8f2932;
+    --olive: #5d6235;
+    --olive-dark: #454927;
+    --gold: #b58a3a;
+    --gold-light: #d3ae61;
+    --cream: #f7f0e3;
+    --cream-dark: #eee2cf;
+    --white: #fffdf9;
+    --dark: #241d19;
+    --text: #3d342e;
+    --muted: #806f61;
+    --border: #e4d6c2;
+    --shadow: 0 8px 30px rgba(77, 39, 24, 0.10);
+  }
+
+  body {
+    font-family: Tahoma, Arial, sans-serif;
+    background:
+      radial-gradient(
+        circle at top,
+        #fffaf2 0%,
+        #f7f0e3 45%,
+        #efe4d2 100%
+      );
+    color: var(--text);
+  }
+
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero {
+    min-height: 460px;
+    position: relative;
+
+    background:
+      linear-gradient(
+        rgba(42, 20, 16, 0.62),
+        rgba(61, 24, 25, 0.70)
+      ),
+      url("WhatsApp Image 2026-10-06 at 8.23.24 PM (1).jpeg")
+      center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px 20px;
+
+    border-bottom:
+      5px solid var(--gold);
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+
+    border:
+      1px solid rgba(211,174,97,0.55);
+
+    border-radius: 22px;
+
+    pointer-events: none;
+  }
+
+  .hero-card {
+    position: relative;
+
+    width: min(900px, 95%);
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255,253,249,0.98),
+        rgba(247,240,227,0.97)
+      );
+
+    border-radius: 12px;
+
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    box-shadow:
+      0 25px 70px rgba(0,0,0,0.30);
+
+    border:
+      2px solid rgba(181,138,58,0.55);
+  }
+
+  .hero-card::before,
+  .hero-card::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: var(--gold);
+
+    font-size: 25px;
+  }
+
+  .hero-card::before {
+    top: 12px;
+    right: 18px;
+  }
+
+  .hero-card::after {
+    bottom: 12px;
+    left: 18px;
+  }
+
+  .restaurant-logo {
+    width: 130px;
+    height: 130px;
+
+    min-width: 130px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border:
+      5px solid var(--gold);
+
+    box-shadow:
+      0 8px 30px rgba(75,30,20,0.22);
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+
+    color: var(--burgundy);
+
+    margin-bottom: 15px;
+
+    font-weight: 800;
+  }
+
+  .hero-content p {
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: var(--muted);
+  }
+
+  .stars {
+    color: var(--gold);
+
+    font-size: 21px;
+
+    margin-top: 12px;
+
+    letter-spacing: 3px;
+  }
+
+
+  /* =========================
+     MAIN
+  ========================= */
+
+  .container {
+    width: min(1200px, 94%);
+
+    margin: auto;
+
+    padding-bottom: 160px;
+  }
+
+
+  /* =========================
+     SEARCH
+  ========================= */
+
+  .search-box {
+    margin: 35px auto 25px;
+
+    position: relative;
+
+    max-width: 750px;
+  }
+
+  .search-box input {
+    width: 100%;
+
+    padding: 18px 55px 18px 20px;
+
+    border:
+      1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--white);
+
+    box-shadow: var(--shadow);
+
+    font-size: 17px;
+
+    outline: none;
+
+    color: var(--text);
+  }
+
+  .search-box input::placeholder {
+    color: #a39180;
+  }
+
+  .search-box input:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+      0 5px 25px rgba(181,138,58,0.15);
+  }
+
+  .search-icon {
+    position: absolute;
+
+    right: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 23px;
+
+    color: var(--burgundy);
+  }
+
+
+  /* =========================
+     SECTION TITLE
+  ========================= */
+
+  .section-title {
+    font-size: 26px;
+
+    margin: 38px 0 18px;
+
+    color: var(--burgundy);
+
+    font-weight: 800;
+
+    position: relative;
+
+    padding-right: 18px;
+  }
+
+  .section-title::before {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 4px;
+
+    width: 5px;
+    height: 27px;
+
+    background: var(--gold);
+
+    border-radius: 4px;
+  }
+
+
+  /* =========================
+     CATEGORIES
+  ========================= */
+
+  .categories {
+    display: flex;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    padding: 5px 2px 15px;
+  }
+
+  .categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-btn {
+    border:
+      1px solid var(--border);
+
+    background: var(--white);
+
+    color: var(--text);
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    box-shadow:
+      0 4px 15px rgba(77,39,24,0.07);
+
+    transition: 0.25s;
+  }
+
+  .category-btn:hover,
+  .category-btn.active {
+    background: var(--burgundy);
+
+    border-color: var(--burgundy);
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+      0 7px 18px rgba(114,28,36,0.22);
+  }
+
+
+  /* =========================
+     MENU
+  ========================= */
+
+  .menu-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 24px;
+  }
+
+  .food-card {
+    background: var(--white);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+      0 5px 25px rgba(77,39,24,0.08);
+
+    transition: 0.25s;
+
+    border:
+      1px solid var(--border);
+
+    position: relative;
+  }
+
+  .food-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background:
+      linear-gradient(
+        90deg,
+        var(--burgundy),
+        var(--gold),
+        var(--olive)
+      );
+  }
+
+  .food-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+      0 15px 35px rgba(77,39,24,0.15);
+  }
+
+  .food-image {
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: cover;
+
+    display: block;
+  }
+
+  .food-info {
+    padding: 19px;
+  }
+
+  .food-info h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+
+    color: var(--burgundy);
+
+    font-weight: 800;
+  }
+
+  .food-description {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    min-height: 45px;
+  }
+
+  .food-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    padding-top: 13px;
+
+    border-top:
+      1px dashed var(--border);
+  }
+
+  .price {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: var(--burgundy);
+  }
+
+  .add-btn {
+    width: 45px;
+
+    height: 45px;
+
+    border:
+      2px solid var(--gold);
+
+    border-radius: 50%;
+
+    background: var(--burgundy);
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    flex-shrink: 0;
+  }
+
+  .add-btn:hover {
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    transform: scale(1.08);
+  }
+
+
+  /* =========================
+     BRANCHES
+  ========================= */
+
+  .branches-section {
+    width: min(1200px, 94%);
+
+    margin: 40px auto 0;
+
+    padding-bottom: 20px;
+  }
+
+  .branches-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 22px;
+  }
+
+  .branch-card {
+    background:
+      linear-gradient(
+        135deg,
+        var(--white),
+        #f8f0e3
+      );
+
+    border-radius: 12px;
+
+    padding: 28px;
+
+    box-shadow: var(--shadow);
+
+    border:
+      1px solid var(--border);
+
+    transition: 0.25s;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .branch-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+      linear-gradient(
+        90deg,
+        var(--olive),
+        var(--gold),
+        var(--burgundy)
+      );
+  }
+
+  .branch-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 12px 30px rgba(77,39,24,0.14);
+  }
+
+  .branch-icon {
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 12px;
+
+    background: #eee8d8;
+
+    border:
+      1px solid var(--gold-light);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+  }
+
+  .branch-card h3 {
+    color: var(--olive-dark);
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+  }
+
+  .branch-card h4 {
+    color: var(--burgundy);
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+  }
+
+  .branch-card p {
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+  }
+
+  .branch-card a {
+    color: var(--burgundy);
+
+    text-decoration: none;
+
+    font-weight: bold;
+  }
+
+  .branch-card a:hover {
+    color: var(--gold);
+  }
+
+
+  /* =========================
+     WORKING HOURS
+  ========================= */
+
+  .working-hours {
+    background:
+      linear-gradient(
+        135deg,
+        #351a1b,
+        #521b20
+      );
+
+    color: white;
+
+    margin-top: 22px;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    border:
+      1px solid rgba(211,174,97,0.35);
+
+    box-shadow:
+      0 10px 30px rgba(50,20,20,0.18);
+  }
+
+  .working-hours h3 {
+    margin-bottom: 20px;
+
+    font-size: 21px;
+
+    color: var(--gold-light);
+  }
+
+  .hours-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 0;
+
+    border-bottom:
+      1px solid rgba(255,255,255,0.12);
+  }
+
+  .hours-row:last-child {
+    border-bottom: none;
+  }
+
+  .hours-row span {
+    color: #ddcfbf;
+  }
+
+  .hours-row strong {
+    color: white;
+  }
+
+
+  /* =========================
+     CART BAR
+  ========================= */
+
+  .cart-bar {
+    position: fixed;
+
+    bottom: 18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(950px, 94%);
+
+    background:
+      linear-gradient(
+        135deg,
+        #2b1717,
+        #42191d
+      );
+
+    color: white;
+
+    border-radius: 14px;
+
+    padding: 14px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    box-shadow:
+      0 15px 45px rgba(0,0,0,0.35);
+
+    z-index: 1000;
+
+    border:
+      1px solid rgba(211,174,97,0.35);
+  }
+
+  .cart-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  .cart-icon {
+    width: 48px;
+
+    height: 48px;
+
+    background: var(--burgundy);
+
+    border:
+      1px solid var(--gold);
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+  }
+
+  .cart-text small {
+    display: block;
+
+    color: #cbbcae;
+
+    margin-bottom: 3px;
+  }
+
+  .cart-text strong {
+    font-size: 18px;
+
+    color: white;
+  }
+
+  .checkout-btn {
+    border: none;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--gold),
+        #9e742b
+      );
+
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+  }
+
+  .checkout-btn:hover {
+    background:
+      linear-gradient(
+        135deg,
+        #d1a953,
+        #b4832e
+      );
+
+    transform: translateY(-2px);
+  }
+
+  .whatsapp-btn {
+    width: 50px;
+
+    height: 50px;
+
+    border:
+      2px solid white;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+  }
+
+  .whatsapp-btn:hover {
+    transform: scale(1.08);
+  }
+
+
+  /* =========================
+     MODAL
+  ========================= */
+
+  .modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+      rgba(40,20,15,0.72);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 2000;
+
+    padding: 20px;
+
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-overlay.show {
+    display: flex;
+  }
+
+  .modal {
+    width: min(520px, 100%);
+
+    background:
+      linear-gradient(
+        135deg,
+        #fffdf9,
+        #f7f0e3
+      );
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border:
+      1px solid var(--gold-light);
+
+    box-shadow:
+      0 25px 70px rgba(0,0,0,0.35);
+  }
+
+  .modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  .modal-header h2 {
+    color: var(--burgundy);
+  }
+
+  .close-btn {
+    border:
+      1px solid var(--border);
+
+    background: #eee5d8;
+
+    color: var(--burgundy);
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    background: var(--burgundy);
+
+    color: white;
+  }
+
+  .selected-food {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    background: #f1e8da;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    border:
+      1px solid var(--border);
+  }
+
+  .selected-food img {
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+  }
+
+  .selected-food h3 {
+    margin-bottom: 6px;
+
+    color: var(--burgundy);
+  }
+
+
+  /* =========================
+     OPTIONS
+  ========================= */
+
+  .size-title {
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+    color: var(--olive-dark);
+  }
+
+  .sizes {
+    display: grid;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+  }
+
+  .size-option {
+    border:
+      2px solid var(--border);
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    transition: 0.2s;
+
+    background: white;
+  }
+
+  .size-option:hover {
+    border-color: var(--gold);
+  }
+
+  .size-option.selected {
+    border-color: var(--burgundy);
+
+    background: #fbf0ee;
+
+    box-shadow:
+      0 4px 12px rgba(114,28,36,0.08);
+  }
+
+  .size-option strong {
+    color: var(--burgundy);
+  }
+
+  .modal-add {
+    width: 100%;
+
+    border: none;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--burgundy),
+        var(--burgundy-dark)
+      );
+
+    color: white;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+  }
+
+  .modal-add:hover {
+    background: var(--olive-dark);
+
+    transform: translateY(-1px);
+  }
+
+
+  /* =========================
+     EMPTY SEARCH
+  ========================= */
+
+  .empty-search {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: var(--muted);
+  }
+
+  .empty-search div {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+  }
+
+
+  /* =========================
+     RESPONSIVE
+  ========================= */
+
+  @media (max-width: 900px) {
+
+    .menu-grid {
+      grid-template-columns:
+        repeat(2, 1fr);
+    }
+
+  }
+
+
+  @media (max-width: 650px) {
+
+    .hero {
+      min-height: 400px;
+    }
+
+    .hero::before {
+      inset: 8px;
+    }
+
+    .hero-card {
+      flex-direction: column;
+
+      text-align: center;
+
+      padding: 25px 18px;
+    }
+
+    .restaurant-logo {
+      width: 105px;
+
+      height: 105px;
+
+      min-width: 105px;
+    }
+
+    .hero-content h1 {
+      font-size: 28px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+    }
+
+    .menu-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .food-image {
+      height: 230px;
+    }
+
+    .branches-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hours-row {
+      flex-direction: column;
+
+      gap: 6px;
+    }
+
+    .cart-bar {
+      padding: 10px;
+
+      border-radius: 12px;
+    }
+
+    .cart-text strong {
+      font-size: 14px;
+    }
+
+    .checkout-btn {
+      padding: 12px 15px;
+
+      font-size: 14px;
+    }
+
+    .whatsapp-btn {
+      display: none;
+    }
+
+  }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-card">
+
+      <img
+        class="restaurant-logo"
+        src="WhatsApp Image 2026-10-06 at 8.23.24 PM (1).jpeg"
+        alt="مطعم نكهة اسطنبول"
+      >
+
+      <div class="hero-content">
+
+        <h1>
+          مطعم نكهة اسطنبول
+        </h1>
+
+        <p>
+          استمتع بأشهى الوجبات التي تجمع بين الأصالة
+          والإبداع في كل لقمة
+        </p>
+
+        <div class="stars">
+          ★ ★ ★ ★ ★
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       BRANCHES
+  ========================= -->
+
+  <section class="branches-section">
+
+    <h2 class="section-title">
+      📍 فروعنا
+    </h2>
+
+    <div class="branches-grid">
+
+
+      <!-- BRANCH 1 -->
+
+      <div class="branch-card">
+
+        <div class="branch-icon">
+          📍
+        </div>
+
+        <h3>
+          الفرع الأول
+        </h3>
+
+        <h4>
+          الجبل الأبيض
+        </h4>
+
+        <p>
+          مقابل جسر جامع الأردن
+        </p>
+
+        <a href="tel:0788218393">
+          📞 0788218393
+        </a>
+
+      </div>
+
+
+      <!-- BRANCH 2 -->
+
+      <div class="branch-card">
+
+        <div class="branch-icon">
+          📍
+        </div>
+
+        <h3>
+          الفرع الثاني
+        </h3>
+
+        <h4>
+          دوار الشهيد راشد الوزيود
+        </h4>
+
+        <p>
+          دوار الطيارة — مجمع السوداني
+          <br>
+          بجانب أفران تفاحة
+        </p>
+
+        <a href="tel:0788218494">
+          📞 0788218494
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- WORKING HOURS -->
+
+    <div class="working-hours">
+
+      <h3>
+        🕐 أوقات الدوام
+      </h3>
+
+      <div class="hours-row">
+
+        <span>
+          الجمعة – الأربعاء
+        </span>
+
+        <strong>
+          10:00 صباحاً → 2:00 صباحاً
+        </strong>
+
+      </div>
+
+      <div class="hours-row">
+
+        <span>
+          الخميس
+        </span>
+
+        <strong>
+          10:00 صباحاً → 3:00 صباحاً
+        </strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       MAIN
+  ========================= -->
+
+  <main class="container">
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+      <span class="search-icon">
+        🔍
+      </span>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="ابحث في المنيو..."
+      >
+
+    </div>
+
+
+
+    <!-- CATEGORIES -->
+
+    <h2 class="section-title">
+      تصنيفات المنيو
+    </h2>
+
+
+    <div class="categories">
+
+      <button
+        class="category-btn active"
+        data-category="all">
+
+        الكل
+
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="shawarma">
+
+        🌯 الشاورما
+
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="special">
+
+        🍔 الوجبات المميزة
+
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="snacks">
+
+        🍟 السناكات
+
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="broasted">
+
+        🍗 البروستد
+
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="turkish">
+
+        🍗 الدجاج التركي
+
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="grilled">
+
+        🔥 الدجاج الشواي
+
+      </button>
+
+    </div>
+
+
+
+    <!-- MENU -->
+
+    <h2 class="section-title">
+      قائمتنا
+    </h2>
+
+
+    <div
+      class="menu-grid"
+      id="menuGrid">
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       CART BAR
+  ========================= -->
+
+  <div class="cart-bar">
+
+    <div class="cart-info">
+
+      <div class="cart-icon">
+        🛒
+      </div>
+
+      <div class="cart-text">
+
+        <small>
+          سلة الطلب
+        </small>
+
+        <strong>
+
+          <span id="cartCount">
+            0
+          </span>
+
+          عنصر —
+
+          <span id="cartTotal">
+            0.00
+          </span>
+
+          د.أ
+
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="whatsapp-btn"
+      onclick="openWhatsApp()">
+
+      💬
+
+    </button>
+
+
+    <button
+      class="checkout-btn"
+      onclick="goToCart()">
+
+      إتمام الطلب
+
+    </button>
+
+  </div>
+
+
+
+  <!-- =========================
+       PRODUCT MODAL
+  ========================= -->
+
+  <div
+    class="modal-overlay"
+    id="sizeModal">
+
+
+    <div class="modal">
+
+
+      <div class="modal-header">
+
+        <h2>
+          اختر طلبك
+        </h2>
+
+        <button
+          class="close-btn"
+          onclick="closeModal()">
+
+          ×
+
+        </button>
+
+      </div>
+
+
+      <div
+        class="selected-food"
+        id="selectedFood">
+
+      </div>
+
+
+      <div class="size-title">
+
+        اختر النوع:
+
+      </div>
+
+
+      <div
+        class="sizes"
+        id="sizesContainer">
+
+      </div>
+
+
+      <button
+        class="modal-add"
+        onclick="addSelectedToCart()">
+
+        إضافة إلى السلة 🛒
+
+      </button>
+
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+
+    /* =========================================
+       MENU DATA
+    ========================================= */
+
+    const menu = [
+
+
+      /* =========================
+         SHAWARMA
+      ========================= */
+
+      {
+        id: 1,
+        name: "وجبة شاورما حلبي",
+        category: "shawarma",
+        description:
+          "بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.20 PM (2).jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.50
+          }
+        ]
+      },
+
+
+      {
+        id: 2,
+        name: "وجبة العادي",
+        category: "shawarma",
+        description:
+        " 12 قطعة شاورما + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 2.00
+          }
+        ]
+      },
+
+
+      {
+        id: 3,
+        name: "وجبة السوبر",
+        category: "shawarma",
+        description:
+          "18 قطعة شاورما + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 2.60
+          }
+        ]
+      },
+
+
+      {
+        id: 4,
+        name: "وجبة الدبل",
+        category: "shawarma",
+        description:
+          "24 قطعة شاورما + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.15
+          }
+        ]
+      },
+
+
+      {
+        id: 5,
+        name: "وجبة سوبر دبل",
+        category: "shawarma",
+        description:
+          "20 قطعة شاورما + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.85
+          }
+        ]
+      },
+
+
+      {
+        id: 6,
+        name: "وجبة تريل",
+        category: "shawarma",
+        description:
+          "36 قطعة شاورما + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 4.75
+          }
+        ]
+      },
+
+
+      {
+        id: 7,
+        name: "وجبة التوفير",
+        category: "shawarma",
+        description:
+          "60 قطعة شاورما + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 8.50
+          }
+        ]
+      },
+
+
+      {
+        id: 8,
+        name: "الوجبة العائلية",
+        category: "shawarma",
+        description:
+          "72 قطعة شاورما + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 11.00
+          }
+        ]
+      },
+
+
+      {
+        id: 9,
+        name: "وجبة شاورما فرنسي",
+        category: "shawarma",
+        description:
+          "ساندويش فرنسي + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.20 PM (3).jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 2.10
+          }
+        ]
+      },
+
+
+      {
+        id: 10,
+        name: "وجبة حلبي اسطنبولي",
+        category: "shawarma",
+        description:
+          "بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "maxresdefault.jpg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.75
+          }
+        ]
+      },
+
+
+      {
+        id: 11,
+        name: "وجبة ايطالي كريما",
+        category: "shawarma",
+        description:
+          "بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "501064948_2692513180946375_468312385886680368_n.jpg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.60
+          }
+        ]
+      },
+
+
+      {
+        id: 12,
+        name: "وجبة ايطالي باربكيو",
+        category: "shawarma",
+        description:
+          "بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "m8oZVJ6Y-FyjOYCHrdQ-HfLjAN71sgzV4wk8ygQkQunMZQ0Flw485lvEseSZRZxuC3Mz3w87U3Qh_7LASknmeMItWlAK3IrRd9xfti4vSvZzzTRr8w82TnuXVUsNAphcV4PHMJdsqAtLIrCsT3WkxOPfBZ3Is1U1cHXZyeKNFZ0Gn-Rdt48dgZYDW7UynQ.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.60
+          }
+        ]
+      },
+
+
+      {
+        id: 13,
+        name: "وجبة ايطالي مكسيكي",
+        category: "shawarma",
+        description:
+          "بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 9.27.49 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.60
+          }
+        ]
+      },
+
+
+      {
+        id: 14,
+        name: "وجبة عادي اسطنبولي",
+        category: "shawarma",
+        description:
+          "بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM (1).jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 22,
+        name: "وجبة سوبر اسطنبولي",
+        category: "shawarma",
+        description:
+           " بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80",
+        options: [
+          {
+            name: "وجبة",
+            price: 2.90
+          }
+        ]
+      },
+
+
+      {
+        id: 23,
+        name: "وجبة دبل اسطنبولي",
+        category: "shawarma",
+        description:
+          "  بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.50
+          }
+        ]
+      },
+
+      {
+        id: 15,
+        name: "ساندويش صغير",
+        category: "shawarma",
+        
+         
+        image:
+          "WhatsApp Image 2026-10-06 at 9.43.40 PM.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 0.60
+          }
+        ]
+      },
+
+
+      {
+        id: 16,
+        name: "ساندويش خبز عادي",
+        category: "shawarma",
+        
+        image:
+          "WhatsApp Image 2026-10-06 at 9.43.40 PM.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 0.65
+          }
+        ]
+      },
+
+
+      {
+        id: 17,
+        name: "ساندويش كبير",
+        category: "shawarma",
+        
+        image:
+          "WhatsApp Image 2026-10-06 at 9.43.40 PM.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.10
+          }
+        ]
+      },
+
+
+      {
+        id: 18,
+        name: "ساندويش فرنسي",
+        category: "shawarma",
+        
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.23 PM.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.25
+          }
+        ]
+      },
+
+
+      {
+        id: 19,
+        name: "ساندويش اسطنبولي",
+        category: "shawarma",
+        
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.24 PM (1).jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.25
+          }
+        ]
+      },
+
+
+      {
+        id: 20,
+        name: "ساندويش شاورما فرنسي باربكيو",
+        category: "shawarma",
+        
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.24 PM (1).jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          }
+        ]
+      },
+
+
+      {
+        id: 21,
+        name: "ساندويش شاورما فرنسي كريما",
+        category: "shawarma",
+        
+        image:
+          "ArEMI-3h0ziqfueSB8nvVhsHHnJbN09D0q6diSJoX8gbqPcY8GYUWBsvpCzTrZaWt5Bg2e4To0107AqOPSK80Hl_U-IW-Uni_dVcfVJLjf26FBsIsNa27FWfP3Mb10uY86JQbcPEisZGj-0wVpLNGvwAKNPa5BAtDltDbvflLUsIrBHrki7JuzUKNP2LGT.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          }
+        ]
+      },
+
+
+
+      /* =========================
+         SPECIAL MEALS
+      ========================= */
+
+      {
+        id: 30,
+        name: "تشكن باربكيو فرنسي",
+        category: "special",
+    
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.24 PM (1).jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 31,
+        name: "تشكن باربكيو برغر",
+        category: "special",
+        image:
+          "EPxyn4Jx0AN7hs1fzn4kOJXp1UKzEhc3Bc9qbowWCDuBfZRmIPSG7MAklJLpo2lwVKQyqFTFcmWDlZr0gEM6hTrbfHSXODTqPqIFoJ2xbv2EQwkCZ2ExJ7JgXhQIPHLI3rPsjyykZtZFmO_DX8VY_QOR5BN8jJ7oS5KBpOo24SFapJw9g7Pq-kX-mQLf4S.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 2.00
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 32,
+        name: "دايناميت تشكن برغر",
+        category: "special",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.23 PM (2).jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 2.00
+          },
+          {
+            name: "وجبة",
+            price: 2.75
+          }
+        ]
+      },
+
+
+      {
+        id: 33,
+        name: "مكس تشيز تشكن برغر",
+        category: "special",
+        image:
+          "DKtIr0rUnWBbKF8FXkqVTSZEuxfge6VPiLmHA2UejiH--WXuSY_qPk2VjNZ-p32DffwzMQYnSVZGS_xT8LieeIcnpRZW_bz4AFWZAAK6XQ6BGKSYTUbeQFA0tD6dGId9AioiTroNrFMfWqYv9oWsa4jiRSvYoKdm7oWSnW6ZnaO2NcPKv67cc8GpC10zUe.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 2.00
+          },
+          {
+            name: "وجبة",
+            price: 2.75
+          }
+        ]
+      },
+
+
+      {
+        id: 34,
+        name: "هاني ماستر تشكن برغر",
+        category: "special",
+        description: "برغر دجاج بصوص خاص",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.19 PM (1).jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 2.00
+          },
+          {
+            name: "وجبة",
+            price: 2.75
+          }
+        ]
+      },
+
+
+      {
+        id: 35,
+        name: "ماكسيكان تشكن برغر",
+        category: "special",
+        image:
+          "tXJwYPMn6rXfEszTm5V2VHVVU6GyMcwKtbFGndhI7zCHZOKuyYZ48YCCY6d_-ZgP9iWXPPbKWE9RG3elFDmLgx4u5Vp36a5BnI1vqWZ2PnS_GW0I3_07S7r5LCpfUke_bldPjdOAmxuGosC_-K29tiK1aWo26BVxm0lzKZt9hVU7Ew5wCZXM9gJOCVJZQg.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 2.00
+          },
+          {
+            name: "وجبة",
+            price: 2.75
+          }
+        ]
+      },
+
+
+      {
+        id: 36,
+        name: "برغر 100 غم",
+        category: "special",
+        image:
+          "l9awLsU-OPimCJf2pgsoZhngyZoTXMTBLPaq1FKlNJQD2oUiN4nAZ5XDFnl9NX7urr04Wy3y30pqCoO84BwuBxhqk0vOF2nVoZPDosAl13-v7rcJ5sMRCgb_-v_0HmIwgZ42uke4IxF7_U1ysvTgu0sQquEntmCHnDluq5y2WRQ.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.35
+          },
+          {
+            name: "وجبة",
+            price: 2.15
+          }
+        ]
+      },
+
+{
+        id: 36,
+        name: "برغر 150 غم",
+        category: "special",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.20 PM (1).jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.75
+          },
+          {
+            name: "وجبة",
+            price: 2.50
+          }
+        ]
+      },
+
+      {
+        id: 37,
+        name: "تشكن ماشروم",
+        category: "special",
+        description: "دجاج مع الفطر والصوص الكريمي",
+        image:
+          "2.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 38,
+        name: "زنجر فرنسي",
+        category: "special",
+        description: "دجاج زنجر مقرمش بخبز فرنسي",
+        image:
+          "3.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 39,
+        name: "زنجر صاج",
+        category: "special",
+        description: "زنجر بخبز الصاج",
+        image:
+          "4.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 40,
+        name: "زنجر صاج سوبر",
+        category: "special",
+        description: "زنجر صاج سوبر",
+        image:
+          "4.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.00
+          }
+        ]
+      },
+
+
+      {
+        id: 41,
+        name: "زنجر دبل",
+        category: "special",
+        description: "زنجر دبل",
+        image:
+          "5.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.75
+          }
+        ]
+      },
+
+
+      {
+        id: 42,
+        name: "زنجر صاج تربل",
+        category: "special",
+        description: "زنجر صاج تربل",
+        image:
+          "6.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 5.00
+          }
+        ]
+      },
+
+
+      {
+        id: 43,
+        name: "زنجر عائلي",
+        category: "special",
+        description: "وجبة زنجر عائلية",
+        image:
+          "6.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 11.00
+          }
+        ]
+      },
+
+
+      {
+        id: 44,
+        name: "زنجر فرنسي كريما",
+        category: "special",
+        description: "زنجر فرنسي مع صوص الكريما",
+        image:
+          "7.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.75
+          },
+          {
+            name: "وجبة",
+            price: 2.50
+          }
+        ]
+      },
+
+
+      {
+        id: 45,
+        name: "زنجريتو فرنسي بالباربكيو",
+        category: "special",
+        description: "زنجريتو فرنسي بصوص الباربكيو",
+        image:
+          "8.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.75
+          },
+          {
+            name: "وجبة",
+            price: 2.50
+          }
+        ]
+      },
+
+
+      {
+        id: 46,
+        name: "زنجر صاج بالباربكيو",
+        category: "special",
+        description: "زنجر صاج بصوص الباربكيو",
+        image:
+          "9.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.60
+          },
+          {
+            name: "وجبة",
+            price: 2.50
+          }
+        ]
+      },
+
+
+      {
+        id: 47,
+        name: "زنجر فرنسي باربكيو",
+        category: "special",
+        description: "زنجر فرنسي بصوص الباربكيو",
+        image:
+          "yj-Vefmup-smcFRpnLtxcL3lbaW7aLon8JOyz8STMCOCw3WSqYkr0MIqICUFeB45UT23nSnVSN7Eaht-GPUY-hvR4Tdbu1fKpNtq3ev-FN0soQIFIQpPknkNopiOYM6F1Kw1G5GftNhlLqeplIKi-83ujnMekgdKXP_l8nwZccObLoxPNk2pvfR3YrFIu1.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.60
+          },
+          {
+            name: "وجبة",
+            price: 2.50
+          }
+        ]
+      },
+
+
+      {
+        id: 48,
+        name: "برغريتو دجاج",
+        category: "special",
+        description: "برغريتو دجاج",
+        image:
+          "10.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      /* =========================
+         SNACKS
+      ========================= */
+
+      {
+        id: 50,
+        name: "فرانسيسكو",
+        category: "snacks",
+        description: "ساندويش فرانسيسكو",
+        image:
+          "11.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 51,
+        name: "مكسيكي",
+        category: "snacks",
+        description: "ساندويش مكسيكي",
+        image:
+          "12.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 52,
+        name: "سكالوب",
+        category: "snacks",
+        description: "ساندويش سكالوب",
+        image:
+          "13.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.10
+          },
+          {
+            name: "وجبة",
+            price: 1.90
+          }
+        ]
+      },
+
+
+      {
+        id: 53,
+        name: "تشكن فيليه",
+        category: "snacks",
+        description: "ساندويش تشكن فيليه",
+        image:
+          "14.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.60
+          },
+          {
+            name: "وجبة",
+            price: 2.35
+          }
+        ]
+      },
+
+
+      {
+        id: 54,
+        name: "برغريتو لحمة",
+        category: "snacks",
+        description: "برغريتو لحم",
+        image:
+          "15.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.75
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 55,
+        name: "اوفر دوز",
+        category: "snacks",
+        description: "اوفر دوز",
+        image:
+          "16.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.75
+          },
+          {
+            name: "وجبة",
+            price: 2.50
+          }
+        ]
+      },
+
+
+      {
+        id: 56,
+        name: "اوفر دوز سوبر",
+        category: "snacks",
+        description: "اوفر دوز سوبر",
+        image:
+          "16.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.25
+          }
+        ]
+      },
+
+
+      {
+        id: 57,
+        name: "اوفر دوز دبل",
+        category: "snacks",
+        description: "اوفر دوز دبل",
+        image:
+          "16.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 4.00
+          }
+        ]
+      },
+
+
+      {
+        id: 58,
+        name: "فاهيتا",
+        category: "snacks",
+        description: "ساندويش فاهيتا",
+        image:
+          "17.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.50
+          },
+          {
+            name: "وجبة",
+            price: 2.25
+          }
+        ]
+      },
+
+
+      {
+        id: 59,
+        name: "كوردن بلو",
+        category: "snacks",
+        description: "ساندويش كوردن بلو",
+        image:
+          "18.jpeg",
+        options: [
+          {
+            name: "ساندويش",
+            price: 1.35
+          },
+          {
+            name: "وجبة",
+            price: 2.15
+          }
+        ]
+      },
+
+
+      /* =========================
+         BROASTED
+      ========================= */
+
+      {
+        id: 70,
+        name: "4 قطع بروستد",
+        category: "broasted",
+        description:
+          "4 قطع بروستد + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.00
+          }
+        ]
+      },
+
+
+      {
+        id: 71,
+        name: "8 قطع بروستد",
+        category: "broasted",
+        description:
+          "8 قطع بروستد + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+        options: [
+          {
+            name: "وجبة",
+            price: 5.50
+          }
+        ]
+      },
+
+
+      {
+        id: 72,
+        name: "12 قطعة بروستد",
+        category: "broasted",
+        description:
+          "12 قطعة بروستد + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+        options: [
+          {
+            name: "وجبة",
+            price: 8.50
+          }
+        ]
+      },
+
+
+      {
+        id: 73,
+        name: "16 قطعة بروستد",
+        category: "broasted",
+        description:
+          "16 قطعة بروستد + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+        options: [
+          {
+            name: "وجبة",
+            price: 11.00
+          }
+        ]
+      },
+
+
+      {
+        id: 74,
+        name: "20 قطعة بروستد",
+        category: "broasted",
+        description:
+          "20 قطعة بروستد + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+        options: [
+          {
+            name: "وجبة",
+            price: 14.00
+          }
+        ]
+      },
+
+
+      {
+        id: 75,
+        name: "24 قطعة بروستد",
+        category: "broasted",
+        description:
+          "24 قطعة بروستد + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+        options: [
+          {
+            name: "وجبة",
+            price: 16.50
+          }
+        ]
+      },
+
+
+      /* =========================
+         TURKISH CHICKEN
+      ========================= */
+
+      {
+        id: 80,
+        name: "نصف دجاجة تركي",
+        category: "turkish",
+        description:
+          "نصف دجاجة تركي + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.23 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 3.00
+          }
+        ]
+      },
+
+
+      {
+        id: 81,
+        name: "دجاجة تركي",
+        category: "turkish",
+        description:
+          "دجاجة تركي + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.23 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 5.50
+          }
+        ]
+      },
+
+
+      {
+        id: 82,
+        name: "دجاجة ونصف تركي",
+        category: "turkish",
+        description:
+          "دجاجة ونصف + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.23 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 8.50
+          }
+        ]
+      },
+
+
+      {
+        id: 83,
+        name: "دجاجتين تركي",
+        category: "turkish",
+        description:
+          "دجاجتين + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.23 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 11.00
+          }
+        ]
+      },
+
+
+      {
+        id: 84,
+        name: "دجاجتين ونصف تركي",
+        category: "turkish",
+        description:
+          "دجاجتين ونصف + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.23 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 14.00
+          }
+        ]
+      },
+
+
+      {
+        id: 85,
+        name: "ثلاث دجاجات تركي",
+        category: "turkish",
+        description:
+          "ثلاث دجاجات + بطاطا + مثومة + كولسلو + مخلل",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.23 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 16.50
+          }
+        ]
+      },
+
+
+      /* =========================
+         GRILLED CHICKEN
+      ========================= */
+
+      {
+        id: 90,
+        name: "نصف دجاجة شواي",
+        category: "grilled",
+        description:
+          "نصف دجاجة شواي",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.25 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 2.75
+          }
+        ]
+      },
+
+
+      {
+        id: 91,
+        name: "دجاجة شواي",
+        category: "grilled",
+        description:
+          "دجاجة شواي",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.56.22 PM (1).jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 5.00
+          }
+        ]
+      },
+
+
+      {
+        id: 92,
+        name: "نصف دجاجة شواي سادة",
+        category: "grilled",
+        description:
+          "نصف دجاجة شواي سادة",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.25 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 2.10
+          }
+        ]
+      },
+
+
+      {
+        id: 93,
+        name: "دجاجة شواي سادة",
+        category: "grilled",
+        description:
+          "دجاجة شواي سادة",
+        image:
+          "WhatsApp Image 2026-10-06 at 8.23.25 PM.jpeg",
+        options: [
+          {
+            name: "وجبة",
+            price: 4.20
+          }
+        ]
+      }
+
+    ];
+
+
+    /* =========================================
+       CART
+    ========================================= */
+
+    let cart = [];
+
+    let selectedFood = null;
+
+    let selectedOption = null;
+
+
+    /* =========================================
+       DISPLAY MENU
+    ========================================= */
+
+    function displayMenu(items = menu) {
+
+      const grid =
+        document.getElementById("menuGrid");
+
+      grid.innerHTML = "";
+
+
+      if (items.length === 0) {
+
+        grid.innerHTML = `
+
+          <div class="empty-search">
+
+            <div>
+              🔍
+            </div>
+
+            <h3>
+              لم نجد هذه الوجبة
+            </h3>
+
+            <p>
+              جربي البحث باسم مختلف
+            </p>
+
+          </div>
+
+        `;
+
+        return;
+      }
+
+
+      items.forEach(food => {
+
+        const cheapestPrice =
+          Math.min(
+            ...food.options.map(
+              option => option.price
+            )
+          );
+
+
+        let priceText =
+          `يبدأ من ${cheapestPrice.toFixed(2)} د.أ`;
+
+
+        if (food.options.length === 1) {
+
+          priceText =
+            `${cheapestPrice.toFixed(2)} د.أ`;
+
+        }
+
+
+        grid.innerHTML += `
+
+          <div
+            class="food-card"
+            data-category="${food.category}"
+          >
+
+            <img
+              class="food-image"
+              src="${food.image}"
+              alt="${food.name}"
+            >
+
+            <div class="food-info">
+
+              <h3>
+                ${food.name}
+              </h3>
+
+              <p class="food-description">
+                ${food.description}
+              </p>
+
+              <div class="food-bottom">
+
+                <div class="price">
+                  ${priceText}
+                </div>
+
+                <button
+                  class="add-btn"
+                  onclick="openProductModal(${food.id})"
+                >
+                  +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        `;
+
+      });
+
+    }
+
+
+    /* =========================================
+       OPEN PRODUCT MODAL
+    ========================================= */
+
+    function openProductModal(foodId) {
+
+      selectedFood =
+        menu.find(
+          food => food.id === foodId
+        );
+
+
+      selectedOption =
+        selectedFood.options[0];
+
+
+      const selectedFoodBox =
+        document.getElementById("selectedFood");
+
+
+      selectedFoodBox.innerHTML = `
+
+        <img
+          src="${selectedFood.image}"
+          alt="${selectedFood.name}"
+        >
+
+        <div>
+
+          <h3>
+            ${selectedFood.name}
+          </h3>
+
+          <p>
+            اختر النوع المناسب
+          </p>
+
+        </div>
+
+      `;
+
+
+      const optionsContainer =
+        document.getElementById(
+          "sizesContainer"
+        );
+
+
+      optionsContainer.innerHTML = "";
+
+
+      selectedFood.options.forEach(
+        (option, index) => {
+
+          optionsContainer.innerHTML += `
+
+            <div
+              class="size-option
+              ${index === 0 ? "selected" : ""}"
+
+              onclick="
+                selectOption(
+                  this,
+                  '${option.name}',
+                  ${option.price}
+                )
+              "
+            >
+
+              <span>
+                ${option.name}
+              </span>
+
+              <strong>
+                ${option.price.toFixed(2)} د.أ
+              </strong>
+
+            </div>
+
+          `;
+
+        }
+      );
+
+
+      document
+        .getElementById("sizeModal")
+        .classList.add("show");
+
+    }
+
+
+    /* =========================================
+       SELECT OPTION
+    ========================================= */
+
+    function selectOption(
+      element,
+      name,
+      price
+    ) {
+
+      document
+        .querySelectorAll(".size-option")
+        .forEach(option => {
+
+          option.classList.remove(
+            "selected"
+          );
+
+        });
+
+
+      element.classList.add(
+        "selected"
+      );
+
+
+      selectedOption = {
+        name: name,
+        price: price
+      };
+
+    }
+
+
+    /* =========================================
+       ADD TO CART
+    ========================================= */
+
+    function addSelectedToCart() {
+
+      if (
+        !selectedFood ||
+        !selectedOption
+      ) {
+        return;
+      }
+
+
+      const existing =
+        cart.find(item =>
+
+          item.id === selectedFood.id &&
+
+          item.option ===
+          selectedOption.name
+
+        );
+
+
+      if (existing) {
+
+        existing.quantity++;
+
+      }
+
+      else {
+
+        cart.push({
+
+          id: selectedFood.id,
+
+          name: selectedFood.name,
+
+          image: selectedFood.image,
+
+          option:
+            selectedOption.name,
+
+          price:
+            selectedOption.price,
+
+          quantity: 1
+
+        });
+
+      }
+
+
+      updateCart();
+
+      closeModal();
+
+    }
+
+
+    /* =========================================
+       UPDATE CART
+    ========================================= */
+
+    function updateCart() {
+
+      const count =
+        cart.reduce(
+
+          (total, item) =>
+
+            total + item.quantity,
+
+          0
+
+        );
+
+
+      const total =
+        cart.reduce(
+
+          (sum, item) =>
+
+            sum +
+            item.price *
+            item.quantity,
+
+          0
+
+        );
+
+
+      document
+        .getElementById("cartCount")
+        .textContent = count;
+
+
+      document
+        .getElementById("cartTotal")
+        .textContent =
+        total.toFixed(2);
+
+
+      localStorage.setItem(
+
+        "restaurantCart",
+
+        JSON.stringify(cart)
+
+      );
+
+    }
+
+
+    /* =========================================
+       CLOSE MODAL
+    ========================================= */
+
+    function closeModal() {
+
+      document
+        .getElementById("sizeModal")
+        .classList.remove("show");
+
+    }
+
+
+    /* =========================================
+       SEARCH
+    ========================================= */
+
+    document
+      .getElementById("searchInput")
+      .addEventListener(
+        "input",
+        function() {
+
+          const search =
+            this.value
+              .trim()
+              .toLowerCase();
+
+
+          const filtered =
+            menu.filter(food =>
+
+              food.name
+                .toLowerCase()
+                .includes(search)
+
+              ||
+
+              food.description
+                .toLowerCase()
+                .includes(search)
+
+            );
+
+
+          displayMenu(filtered);
+
+        }
+      );
+
+
+    /* =========================================
+       CATEGORIES
+    ========================================= */
+
+    document
+      .querySelectorAll(".category-btn")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+
+            document
+              .querySelectorAll(
+                ".category-btn"
+              )
+              .forEach(btn => {
+
+                btn.classList.remove(
+                  "active"
+                );
+
+              });
+
+
+            this.classList.add(
+              "active"
+            );
+
+
+            const category =
+              this.dataset.category;
+
+
+            if (category === "all") {
+
+              displayMenu(menu);
+
+            }
+
+            else {
+
+              displayMenu(
+
+                menu.filter(
+
+                  food =>
+                    food.category ===
+                    category
+
+                )
+
+              );
+
+            }
+
+          }
+        );
+
+      });
+
+
+    /* =========================================
+       GO TO CART
+    ========================================= */
+
+    function goToCart() {
+
+      if (cart.length === 0) {
+
+        alert(
+          "السلة فارغة، أضيفي وجبة أولاً 🛒"
+        );
+
+        return;
+
+      }
+
+
+      window.location.href =
+        "cart.html";
+
+    }
+
+
+    /* =========================================
+       WHATSAPP
+    ========================================= */
+
+    function openWhatsApp() {
+
+      if (cart.length === 0) {
+
+        alert(
+          "السلة فارغة 🛒"
+        );
+
+        return;
+
+      }
+
+
+      /*
+        سيتم اختيار الفرع ورقم الواتساب
+        بشكل كامل في صفحة cart.html.
+      */
+
+      alert(
+        "لإرسال الطلب عبر واتساب، انتقلي إلى إتمام الطلب واختاري الفرع أولاً."
+      );
+
+    }
+
+
+    /* =========================================
+       LOAD CART
+    ========================================= */
+
+    const savedCart =
+      localStorage.getItem(
+        "restaurantCart"
+      );
+
+
+    if (savedCart) {
+
+      try {
+
+        cart =
+          JSON.parse(
+            savedCart
+          );
+
+      }
+
+      catch {
+
+        cart = [];
+
+      }
+
+    }
+
+
+    /* =========================================
+       INITIAL LOAD
+    ========================================= */
+
+    displayMenu();
+
+    updateCart();
+
+
+    /* =========================================
+       CLOSE MODAL OUTSIDE
+    ========================================= */
+
+    document
+      .getElementById("sizeModal")
+      .addEventListener(
+        "click",
+        function(event) {
+
+          if (
+            event.target === this
+          ) {
+
+            closeModal();
+
+          }
+
+        }
+      );
+
+
+  </script>
+
+</body>
+
+</html>

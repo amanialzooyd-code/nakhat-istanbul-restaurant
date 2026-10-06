@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سلة الطلب | نكهة إسطنبول</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .cart-product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 14px;
+    background: #fffaf1;
+    border: 1px solid #e4d6c2;
+    border-radius: 13px;
+    position: relative;
+}
+
+.cart-product img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-product-info {
+    flex: 1;
+}
+
+.cart-product-info h3 {
+    color: #721c24;
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+.cart-product-info p {
+    color: #806f61;
+    margin-bottom: 6px;
+}
+
+.cart-product-info strong {
+    color: #721c24;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    background: #721c24;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quantity span {
+    font-weight: bold;
+}
+
+.remove-btn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .cart-product {
+        align-items: flex-start;
+    }
+
+    .cart-product img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cart-product-info h3 {
+        font-size: 15px;
+    }
+
+}
+
+        /* =========================
+           SHAMI STYLE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(176, 141, 87, 0.08) 0 2px, transparent 3px),
+                radial-gradient(circle at 80% 80%, rgba(111, 29, 42, 0.06) 0 2px, transparent 3px),
+                #f7efe2;
+            background-size: 35px 35px;
+            color: #2b2420;
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 82px;
+            background: #641d2b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 18px rgba(50, 25, 20, 0.18);
+            border-bottom: 3px solid #b08d57;
+        }
+
+        .logo {
+            color: #f5dfb1;
+            font-size: 27px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo::before {
+            content: "✦";
+            color: #c5a15a;
+            margin-left: 8px;
+            font-size: 18px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff8ed;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -8px;
+            width: 0;
+            height: 2px;
+            background: #d5b36a;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e7c77e;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .page-header {
+            position: relative;
+            text-align: center;
+            padding: 70px 20px 65px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(80, 25, 34, 0.97),
+                    rgba(59, 70, 49, 0.96)
+                );
+            color: white;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(220, 190, 125, 0.25);
+            transform: rotate(45deg);
+            top: -150px;
+            right: -70px;
+        }
+
+        .page-header::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(220, 190, 125, 0.2);
+            transform: rotate(45deg);
+            bottom: -130px;
+            left: -50px;
+        }
+
+        .page-header span {
+            display: inline-block;
+            color: #d7b86b;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 13px;
+            letter-spacing: 1px;
+        }
+
+        .page-header h1 {
+            font-size: 38px;
+            color: #fff8ec;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* =========================
+           CART PAGE
+        ========================= */
+
+        .cart-page {
+            width: 90%;
+            max-width: 1200px;
+            margin: 55px auto 80px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+
+        /* =========================
+           BOXES
+        ========================= */
+
+        .cart-items,
+        .order-form {
+            background: rgba(255, 251, 244, 0.96);
+            border: 1px solid #d8c39c;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow:
+                0 12px 35px rgba(76, 45, 30, 0.10);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cart-items::before,
+        .order-form::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(
+                to left,
+                #641d2b,
+                #b08d57,
+                #40513b
+            );
+        }
+
+
+        /* =========================
+           TITLES
+        ========================= */
+
+        .cart-items h2,
+        .order-form h2 {
+            color: #641d2b;
+            font-size: 23px;
+            margin-bottom: 25px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #ddceb2;
+            position: relative;
+        }
+
+        .cart-items h2::after,
+        .order-form h2::after {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            bottom: 9px;
+            color: #b08d57;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CART ITEMS
+        ========================= */
+
+        #cartItems {
+            min-height: 100px;
+        }
+
+        #cartItems > div {
+            border: 1px solid #dfd0b8;
+            background: #fffaf1;
+            border-radius: 13px;
+            margin-bottom: 13px;
+            padding: 16px;
+        }
+
+
+        /* =========================
+           TOTAL
+        ========================= */
+
+        .cart-total {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 13px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #641d2b,
+                    #7c2938
+                );
+            color: #fff7ea;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #b08d57;
+            box-shadow: 0 8px 20px rgba(100, 29, 43, 0.16);
+        }
+
+        .cart-total strong {
+            color: #f0cf7d;
+            font-size: 21px;
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .order-form label {
+            display: block;
+            color: #49362d;
+            font-weight: bold;
+            margin: 17px 0 8px;
+            font-size: 14px;
+        }
+
+        .order-form input,
+        .order-form select,
+        .order-form textarea {
+            width: 100%;
+            border: 1px solid #d5c2a0;
+            background: #fffdf8;
+            color: #302722;
+            padding: 13px 14px;
+            border-radius: 10px;
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .order-form input:focus,
+        .order-form select:focus,
+        .order-form textarea:focus {
+            border-color: #8a2a3a;
+            box-shadow: 0 0 0 3px rgba(138, 42, 58, 0.09);
+            background: #fff;
+        }
+
+        .order-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .order-form input::placeholder,
+        .order-form textarea::placeholder {
+            color: #a39483;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .btn {
+            border: none;
+            border-radius: 11px;
+            padding: 15px 20px;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 18px;
+        }
+
+        .btn.full {
+            width: 100%;
+        }
+
+        .btn.primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    #641d2b,
+                    #842b3b
+                );
+            color: white;
+            border: 1px solid #b08d57;
+            box-shadow: 0 7px 18px rgba(100, 29, 43, 0.18);
+        }
+
+        .btn.primary:hover {
+            transform: translateY(-2px);
+            background:
+                linear-gradient(
+                    135deg,
+                    #7b2434,
+                    #9a3547
+                );
+            box-shadow: 0 10px 24px rgba(100, 29, 43, 0.25);
+        }
+
+        .btn.call-btn {
+            background: #40513b;
+            color: #fff;
+            border: 1px solid #738064;
+            box-shadow: 0 7px 18px rgba(64, 81, 59, 0.16);
+        }
+
+        .btn.call-btn:hover {
+            transform: translateY(-2px);
+            background: #506448;
+            box-shadow: 0 10px 24px rgba(64, 81, 59, 0.22);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .navbar {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .page-header {
+                padding: 55px 15px;
+            }
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .cart-page {
+                grid-template-columns: 1fr;
+                width: 92%;
+                margin-top: 35px;
+            }
+
+            .cart-items,
+            .order-form {
+                padding: 23px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .logo {
+                font-size: 22px;
+            }
+
+            nav {
+                gap: 11px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .page-header h1 {
+                font-size: 27px;
+            }
+
+            .cart-page {
+                width: 94%;
+            }
+
+            .cart-items,
+            .order-form {
+                padding: 19px;
+                border-radius: 14px;
+            }
+
+            .cart-total {
+                font-size: 16px;
+            }
+
+            .cart-total strong {
+                font-size: 18px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        نكهة إسطنبول
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            الرئيسية
+        </a>
+
+       
+
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <span>طلبك</span>
+
+    <h1>
+        سلة الطلب 🛒
+    </h1>
+
+</section>
+
+
+<div class="cart-page">
+
+
+    <div class="cart-items">
+
+        <h2>
+            المنتجات
+        </h2>
+
+        <div id="cartItems">
+
+            <!-- المنتجات تظهر هنا -->
+
+        </div>
+
+        <div class="cart-total">
+
+            المجموع:
+
+            <strong>
+                <span id="cartTotal">
+                    0
+                </span>
+                د.أ
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="order-form">
+
+        <h2>
+            معلومات الطلب
+        </h2>
+
+
+        <label>
+            الاسم
+        </label>
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="اكتب اسمك">
+
+
+        <label>
+            رقم الهاتف
+        </label>
+
+        <input
+            type="tel"
+            id="customerPhone"
+            placeholder="07XXXXXXXX">
+
+
+        <label>
+            اختر الفرع
+        </label>
+
+        <select id="orderBranch">
+
+            <option value="first">
+                الفرع الأول - الجبل الأبيض
+            </option>
+
+           <option value="second">
+ الفرع الثاني - مدينة الشرق_ مجمع السوداني _ افران تفاحة 
+</option>
+        </select>
+
+
+        <label>
+            طريقة استلام الطلب
+        </label>
+
+        <select id="deliveryType">
+
+            <option value="delivery">
+                🚗 توصيل
+            </option>
+
+            <option value="pickup">
+                🏪 استلام من المطعم
+            </option>
+
+        </select>
+
+
+        <label>
+            العنوان
+        </label>
+
+        <textarea
+            id="address"
+            placeholder="اكتب عنوان التوصيل"></textarea>
+
+
+        <label>
+            ملاحظات إضافية
+        </label>
+
+        <textarea
+            id="notes"
+            placeholder="مثلاً: بدون بصل، زيادة صوص..."></textarea>
+
+
+        <button
+            class="btn primary full"
+            onclick="sendOrder()">
+
+            💬 إرسال الطلب عبر WhatsApp
+
+        </button>
+
+
+        <button
+            class="btn call-btn full"
+            onclick="callBranch()">
+
+            📞 اتصال بالمطعم
+
+        </button>
+
+
+    </div>
+
+</div>
+
+<script>
+
+let cart = JSON.parse(
+    localStorage.getItem("restaurantCart")
+) || [];
+
+
+// =========================
+// عرض السلة
+// =========================
+
+function displayCart() {
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartTotal =
+        document.getElementById("cartTotal");
+
+    cartItems.innerHTML = "";
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+            <div style="
+                text-align:center;
+                padding:40px 20px;
+                color:#806f61;
+            ">
+
+                <div style="font-size:50px;">
+                    🛒
+                </div>
+
+                <h3>
+                    السلة فارغة
+                </h3>
+
+                <p>
+                    أضيفي وجبات من المنيو أولاً
+                </p>
+
+            </div>
+        `;
+
+        cartTotal.textContent = "0.00";
+
+        return;
+    }
+
+
+    let total = 0;
+
+
+    cart.forEach((item, index) => {
+
+        const itemTotal =
+            Number(item.price) * Number(item.quantity);
+
+        total += itemTotal;
+
+
+        cartItems.innerHTML += `
+
+            <div class="cart-product">
+
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                >
+
+                <div class="cart-product-info">
+
+                    <h3>
+                        ${item.name}
+                    </h3>
+
+                    <p>
+                        ${item.option}
+                    </p>
+
+                    <strong>
+                        ${Number(item.price).toFixed(2)} د.أ
+                    </strong>
+
+                    <div class="quantity">
+
+                        <button
+                            onclick="decreaseQuantity(${index})">
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            onclick="increaseQuantity(${index})">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="remove-btn"
+                    onclick="removeItem(${index})">
+
+                    🗑️
+
+                </button>
+
+            </div>
+
+        `;
+
+    });
+
+
+    cartTotal.textContent =
+        total.toFixed(2);
+
+}
+
+
+// =========================
+// زيادة الكمية
+// =========================
+
+function increaseQuantity(index) {
+
+    cart[index].quantity++;
+
+    saveCart();
+
+}
+
+
+// =========================
+// تقليل الكمية
+// =========================
+
+function decreaseQuantity(index) {
+
+    if (cart[index].quantity > 1) {
+
+        cart[index].quantity--;
+
+    } else {
+
+        cart.splice(index, 1);
+
+    }
+
+    saveCart();
+
+}
+
+
+// =========================
+// حذف المنتج
+// =========================
+
+function removeItem(index) {
+
+    cart.splice(index, 1);
+
+    saveCart();
+
+}
+
+
+// =========================
+// حفظ السلة
+// =========================
+
+function saveCart() {
+
+    localStorage.setItem(
+        "restaurantCart",
+        JSON.stringify(cart)
+    );
+
+    displayCart();
+
+}
+
+
+// =========================
+// إرسال الطلب عبر WhatsApp
+// =========================
+
+function sendOrder() {
+
+    // التأكد أن السلة ليست فارغة
+    if (cart.length === 0) {
+
+        alert("السلة فارغة، أضيفي منتجات أولاً.");
+
+        return;
+    }
+
+
+    // =========================
+    // معلومات العميل
+    // =========================
+
+    const customerName =
+        document.getElementById("customerName").value.trim();
+
+    const customerPhone =
+        document.getElementById("customerPhone").value.trim();
+
+    const orderBranch =
+        document.getElementById("orderBranch").value;
+
+    const deliveryType =
+        document.getElementById("deliveryType").value;
+
+    const address =
+        document.getElementById("address").value.trim();
+
+    const notes =
+        document.getElementById("notes").value.trim();
+
+
+    // =========================
+    // التحقق من البيانات
+    // =========================
+
+    if (!customerName) {
+
+        alert("يرجى كتابة الاسم.");
+
+        document.getElementById("customerName").focus();
+
+        return;
+    }
+
+
+    if (!customerPhone) {
+
+        alert("يرجى كتابة رقم الهاتف.");
+
+        document.getElementById("customerPhone").focus();
+
+        return;
+    }
+
+
+    if (deliveryType === "delivery" && !address) {
+
+        alert("يرجى كتابة عنوان التوصيل.");
+
+        document.getElementById("address").focus();
+
+        return;
+    }
+
+
+    // =========================
+    // أرقام الفروع
+    // =========================
+
+    const branchNumbers = {
+
+        first: "962788218393",
+
+        second: "962788218494"
+
+    };
+
+
+    // اختيار رقم الفرع
+    const whatsappNumber =
+        branchNumbers[orderBranch];
+
+
+    // =========================
+    // اسم الفرع
+    // =========================
+
+    let branchName = "";
+
+    if (orderBranch === "first") {
+
+        branchName =
+            "الفرع الأول - الجبل الأبيض";
+
+    } else {
+
+        branchName =
+            " الفرع الثاني - مدينة الشرق_ مجمع السوداني _ افران تفاحة ";
+
+    }
+
+
+    // =========================
+    // طريقة الاستلام
+    // =========================
+
+    let deliveryName = "";
+
+    if (deliveryType === "delivery") {
+
+        deliveryName = "🚗 توصيل";
+
+    } else {
+
+        deliveryName = "🏪 استلام من المطعم";
+
+    }
+
+
+    // =========================
+    // حساب المجموع
+    // =========================
+
+    let total = 0;
+
+    let productsMessage = "";
+
+
+    cart.forEach((item, index) => {
+
+        const itemTotal =
+            Number(item.price) * Number(item.quantity);
+
+        total += itemTotal;
+
+
+        productsMessage +=
+`
+${index + 1}. ${item.name}
+   • الخيار: ${item.option}
+   • الكمية: ${item.quantity}
+   • السعر: ${Number(item.price).toFixed(2)} د.أ
+   • الإجمالي: ${itemTotal.toFixed(2)} د.أ
+
+`;
+
+    });
+
+
+    // =========================
+    // إنشاء رسالة الطلب
+    // =========================
+
+    let message = `
+
+🍽️ *طلب جديد - مطعم نكهة إسطنبول*
+
+━━━━━━━━━━━━━━
+
+👤 *معلومات العميل*
+
+الاسم: ${customerName}
+
+📱 رقم الهاتف:
+${customerPhone}
+
+━━━━━━━━━━━━━━
+
+🏪 *الفرع*
+
+${branchName}
+
+━━━━━━━━━━━━━━
+
+📦 *طريقة الاستلام*
+
+${deliveryName}
+
+`;
+
+
+    // إضافة العنوان فقط إذا كان توصيل
+    if (deliveryType === "delivery") {
+
+        message +=
+`
+📍 *عنوان التوصيل*
+
+${address}
+
+`;
+
+    }
+
+
+    // =========================
+    // المنتجات
+    // =========================
+
+    message +=
+`
+━━━━━━━━━━━━━━
+
+🛒 *الطلب*
+
+${productsMessage}
+
+━━━━━━━━━━━━━━
+
+💰 *المجموع النهائي*
+
+*${total.toFixed(2)} د.أ*
+
+`;
+
+
+    // =========================
+    // الملاحظات
+    // =========================
+
+    if (notes) {
+
+        message +=
+`
+━━━━━━━━━━━━━━
+
+📝 *ملاحظات*
+
+${notes}
+
+`;
+
+    }
+
+
+    message +=
+`
+━━━━━━━━━━━━━━
+
+شكراً لطلبك من مطعم نكهة إسطنبول ❤️
+
+`;
+
+
+    // =========================
+    // تحويل الرسالة إلى رابط
+    // =========================
+
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+
+    // =========================
+    // فتح WhatsApp
+    // =========================
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+// =========================
+// اتصال بالفرع
+// =========================
+function callBranch() {
+
+    const orderBranch =
+        document.getElementById("orderBranch").value;
+
+    let phoneNumber = "";
+
+    // الفرع الأول - الجبل الأبيض
+    if (orderBranch === "first") {
+
+        phoneNumber = "0788218393";
+
+    }
+
+    // الفرع الثاني - مدينة الشرق
+    else if (orderBranch === "second") {
+
+        phoneNumber = "0788218494";
+
+    }
+
+    // فتح تطبيق الاتصال
+    window.location.href = "tel:" + phoneNumber;
+
+}// =========================
+// تشغيل السلة
+// =========================
+
+displayCart();
+
+</script>
+</body>
+</html>
